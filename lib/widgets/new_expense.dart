@@ -29,6 +29,14 @@ class _NewExpenseState extends State<NewExpense> {
     });
   }
 
+  void _submitExpenseData() {
+    final enteredAmount = double.tryParse(_amountController.text);
+    final amountIsInvalid = enteredAmount == null;
+    if (_titleController.text.trim().isEmpty) {
+      //show error message
+    }
+  }
+
   @override
   void dispose() {
     _titleController.dispose();
